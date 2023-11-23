@@ -1,12 +1,15 @@
+![Screenshot](https://github.com/tomatophp/tomato-coupons/blob/master/art/screenshot.png)
+
 # Tomato Coupons
 
-Offers and coupons management for TomatoPHP
+Offers and coupons, gift cards manager for TomatoPHP e-commerce system.
 
 ## Installation
 
 ```bash
 composer require tomatophp/tomato-coupons
 ```
+
 after install your package please run this command
 
 ```bash
@@ -45,7 +48,7 @@ you can join our discord server to get support [TomatoPHP](https://discord.gg/VZ
 
 ## Docs
 
-you can check docs of this package on [Docs](https://docs.tomatophp.com/plugins/laravel-package-generator)
+you can check docs of this package on [Docs](https://docs.tomatophp.com/plugins/tomato-coupons)
 
 ## Changelog
 

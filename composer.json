@@ -1,7 +1,7 @@
 {
     "name": "tomatophp/tomato-coupons",
     "type": "library",
-    "description": "Offers and coupons management for TomatoPHP",
+    "description": "Offers and coupons, gift cards manager for TomatoPHP e-commerce system.",
     "keywords": [
         "php",
         "offers",
