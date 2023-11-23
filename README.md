@@ -10,38 +10,6 @@ Offers and coupons, gift cards manager for TomatoPHP e-commerce system.
 composer require tomatophp/tomato-coupons
 ```
 
-after install your package please run this command
-
-```bash
-php artisan tomato-coupons:install
-```
-
-## Publish Assets
-
-you can publish config file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-coupons-config"
-```
-
-you can publish views file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-coupons-views"
-```
-
-you can publish languages file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-coupons-lang"
-```
-
-you can publish migrations file by use this command
-
-```bash
-php artisan vendor:publish --tag="tomato-coupons-migrations"
-```
-
 ## Support
 
 you can join our discord server to get support [TomatoPHP](https://discord.gg/VZc8nBJ3ZU)
