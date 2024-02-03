@@ -54,22 +54,32 @@ class TomatoCouponsServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        TomatoMenu::register([
-            Menu::make()
+        $menus = [];
+
+        if (config("tomato-coupons.features.coupons")) {
+            $menus[] = Menu::make()
                 ->group(__('Offers'))
                 ->label(__('Coupons'))
                 ->icon('bx bxs-discount')
-                ->route('admin.coupons.index'),
-            Menu::make()
+                ->route('admin.coupons.index');
+        }
+
+        if (config("tomato-coupons.features.gift_cards")) {
+            $menus[] = Menu::make()
                 ->group(__('Offers'))
                 ->label(__('Gift Cards'))
                 ->icon('bx bx-gift')
-                ->route('admin.gift-cards.index'),
-            Menu::make()
+                ->route('admin.gift-cards.index');
+        }
+
+        if (config("tomato-coupons.features.referral_codes")) {
+            $menus[] = Menu::make()
                 ->group(__('Offers'))
                 ->label(__('Referral Codes'))
                 ->icon('bx bx-link')
-                ->route('admin.referral-codes.index')
-        ]);
+                ->route('admin.referral-codes.index');
+        }
+
+        TomatoMenu::register($menus);
     }
 }
