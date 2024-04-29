@@ -9,8 +9,7 @@
                 <option value="{{$currency->iso}}">{{$currency->name}}</option>
             @endforeach
         </x-splade-select>
-          <x-splade-checkbox :label="__('Is activated')" name="is_activated" label="Is activated" />
-          <x-splade-checkbox :label="__('Is expired')" name="is_expired" label="Is expired" />
+          <x-splade-checkbox :label="__('Is activated')" name="is_activated"  />
 
         <div class="flex justify-start gap-2 pt-3">
             <x-tomato-admin-submit  label="{{__('Save')}}" :spinner="true" />

@@ -8,7 +8,7 @@
                 <option value="percentage_coupon">{{__('Percentage')}}</option>
             </x-splade-select>
         </div>
-        <x-splade-checkbox :label="__('Is limited')" name="is_limited" label="Is limited" />
+        <x-splade-checkbox :label="__('Is limited')" name="is_limited"  />
         <div v-if="form.is_limited" class="flex flex-col space-y-4">
             @php
                 $categories = \TomatoPHP\TomatoCategory\Models\Category::where('for', 'product-categories')->get();
@@ -43,15 +43,15 @@
             <x-splade-input :label="__('Order total limit')" :placeholder="__('Order total limit')" type='number' name="order_total_limit" />
         </div>
 
-        <x-splade-checkbox :label="__('Is activated')" name="is_activated" label="Is activated" />
-        <x-splade-checkbox :label="__('Is marketing')" name="is_marketing" label="Is marketing" />
+        <x-splade-checkbox :label="__('Is activated')" name="is_activated" />
+        <x-splade-checkbox :label="__('Is marketing')" name="is_marketing" />
         <div v-if="form.is_marketing" class="flex flex-col space-y-4">
             <x-splade-input :label="__('Marketer name')" name="marketer_name" type="text"  :placeholder="__('Marketer name')" />
             <x-splade-input :label="__('Marketer type')" name="marketer_type" type="text"  :placeholder="__('Marketer type')" />
             <x-splade-input :label="__('Marketer amount')" :placeholder="__('Marketer amount')" type='number' name="marketer_amount" />
             <x-splade-input :label="__('Marketer amount max')" :placeholder="__('Marketer amount max')" type='number' name="marketer_amount_max" />
-            <x-splade-checkbox :label="__('Marketer show amount max')" name="marketer_show_amount_max" label="Marketer show amount max" />
-            <x-splade-checkbox :label="__('Marketer hide total sales')" name="marketer_hide_total_sales" label="Marketer hide total sales" />
+            <x-splade-checkbox :label="__('Marketer show amount max')" name="marketer_show_amount_max" />
+            <x-splade-checkbox :label="__('Marketer hide total sales')" name="marketer_hide_total_sales" />
         </div>
 
         <div class="flex justify-start gap-2 pt-3">

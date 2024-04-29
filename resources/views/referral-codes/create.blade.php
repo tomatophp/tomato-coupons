@@ -4,8 +4,8 @@
           <x-splade-select :label="__('Account')" :placeholder="__('Account')" name="account_id" remote-url="/admin/accounts/api" remote-root="data" option-label="name" option-value="id" choices/>
           <x-splade-input :label="__('Name')" name="name" type="text"  :placeholder="__('Name')" />
           <x-splade-input :label="__('Code')" name="code" type="text"  :placeholder="__('Code')" />
-          <x-splade-checkbox :label="__('Is activated')" name="is_activated" label="Is activated" />
-          <x-splade-checkbox :label="__('Is public')" name="is_public" label="Is public" />
+          <x-splade-checkbox :label="__('Is activated')" name="is_activated"  />
+          <x-splade-checkbox :label="__('Is public')" name="is_public" />
 
         <div class="flex justify-start gap-2 pt-3">
             <x-tomato-admin-submit  label="{{__('Save')}}" :spinner="true" />
