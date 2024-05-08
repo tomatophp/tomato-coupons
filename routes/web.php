@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 if (config("tomato-coupons.features.coupons")) {
-    Route::middleware(['web', 'auth', 'splade', 'verified'])->name('admin.')->group(function () {
+    Route::middleware(array_merge(['splade', 'auth'], config('tomato-admin.route_middlewares')))->name('admin.')->group(function () {
         Route::get('admin/coupons', [\TomatoPHP\TomatoCoupons\Http\Controllers\CouponController::class, 'index'])->name('coupons.index');
         Route::get('admin/coupons/api', [\TomatoPHP\TomatoCoupons\Http\Controllers\CouponController::class, 'api'])->name('coupons.api');
         Route::get('admin/coupons/create', [\TomatoPHP\TomatoCoupons\Http\Controllers\CouponController::class, 'create'])->name('coupons.create');
@@ -27,7 +27,7 @@ if (config("tomato-coupons.features.coupons")) {
 }
 
 if (config("tomato-coupons.features.referral_codes")) {
-    Route::middleware(['web', 'auth', 'splade', 'verified'])->name('admin.')->group(function () {
+    Route::middleware(array_merge(['splade', 'auth'], config('tomato-admin.route_middlewares')))->name('admin.')->group(function () {
         Route::get('admin/referral-codes', [\TomatoPHP\TomatoCoupons\Http\Controllers\ReferralCodeController::class, 'index'])->name('referral-codes.index');
         Route::get('admin/referral-codes/api', [\TomatoPHP\TomatoCoupons\Http\Controllers\ReferralCodeController::class, 'api'])->name('referral-codes.api');
         Route::get('admin/referral-codes/create', [\TomatoPHP\TomatoCoupons\Http\Controllers\ReferralCodeController::class, 'create'])->name('referral-codes.create');
@@ -40,7 +40,7 @@ if (config("tomato-coupons.features.referral_codes")) {
 }
 
 if (config("tomato-coupons.features.gift_cards")) {
-    Route::middleware(['web', 'auth', 'splade', 'verified'])->name('admin.')->group(function () {
+    Route::middleware(array_merge(['splade', 'auth'], config('tomato-admin.route_middlewares')))->name('admin.')->group(function () {
         Route::get('admin/gift-cards', [\TomatoPHP\TomatoCoupons\Http\Controllers\GiftCardController::class, 'index'])->name('gift-cards.index');
         Route::get('admin/gift-cards/api', [\TomatoPHP\TomatoCoupons\Http\Controllers\GiftCardController::class, 'api'])->name('gift-cards.api');
         Route::get('admin/gift-cards/create', [\TomatoPHP\TomatoCoupons\Http\Controllers\GiftCardController::class, 'create'])->name('gift-cards.create');
